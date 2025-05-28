@@ -16,8 +16,8 @@ body {
     font-family: "Inter", sans-serif;
     font-size: 1rem;
     font-weight: 400;
-    font-style: normal;
     height: 100vh;
+    background-color: #F3F4F6;
 }
 
 /* heading */
@@ -41,17 +41,18 @@ body {
     }
   }
 }
-
+// section principal
 .main{
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     &__block1{
         background-color: #E5E7EB;
         border-radius: 1rem 1rem 0 0;
         width: 20rem;
         margin: -4rem auto auto auto;
         padding: 1rem ;
-        &--element{
+        &--iphone{
             display: flex;
             .bold{
                 font-weight: 700;
@@ -63,20 +64,180 @@ body {
                 margin-left: 9rem;
             }
         }
-        &--img{
+        &--imgIphone{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 5.5rem;
+            height: 7rem;
             padding: 1.5rem;
             margin-right: 1rem;
             border: 2px solid #D2D5DA;
             border-radius: 1rem;
             background-color: #F3F4F6;
         }
+        &--imgApple-watch,&--imgImac{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: 5.5rem;
+          height: 6rem;
+          padding: 1.5rem;
+          margin-top: 1rem;
+          border: 2px solid #D2D5DA;
+          border-radius: 1rem;
+          background-color: #F3F4F6;
+        }
+        &--imgImac{
+          padding: 0.5rem;
+        }
+    &--Apple-watch,&--iMac{
+      display: flex;
+      .phrase{
+        margin: 1rem 0 0 1rem;
+      }
+      .bold{
+          font-weight: 700;
+      }
+      .spacePrice{
+          margin-left: 1.4rem;
+      }
+      .space{
+           margin-left: 9rem;
+      }
     }
+    &--iMac{
+      .spacePrice{
+          margin-left: 4.5rem;
+      }
+    }
+    }
+
+  &__block2{
+    background-color: #FFFFFF;
+    border-radius: 0 0 1rem 1rem;
+    width: 20rem;
+    margin: -1rem auto auto auto;
+    padding: 1rem ;
+    box-shadow: 0px 4px 4px -1px rgba(17, 23, 41, 0.05);
+  }
 }
 
-/* Box-shadow */
-h1{
-    box-shadow: 0px 4px 4px -1px rgba(17, 23, 41, 0.05);
+.separteur{
+  color: #D2D5DA;
+  margin-top: 2rem;
 }
+
+// Le formulaire
+.form{
+  margin-top: 2rem;
+  &__text{
+    padding: 0.7rem;
+    border: 1px solid #D2D5DA;
+    border-radius: 0.5rem;
+    text-align: center;
+    width: 9rem;
+  }
+  &__button{
+    padding: 0.6rem;
+    margin-left: 0.6rem;
+    color: #FFFFFF;
+    background-color: #1D1D1F;
+    border: 1px solid #1D1D1F;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
+}
+
+.total{
+  color: #1D1D1F;
+  font-weight:300;
+  margin-top: 1rem;
+  &__spacePrice1{
+    margin-left: 8rem;
+  }
+   &__spacePrice2{
+    margin-left: 10.5rem;
+  }
+  &__spacePrice3{
+    margin-left: 10rem;
+  }
+}
+
+.formInformation{
+  display: flex;
+  flex-direction: column;
+  .input{
+    width: 17rem;
+    padding: 0.8rem;
+    background-color: #E5E7EB;
+    border: 1px solid #D2D5DA;
+    border-radius: 0.5rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  label{
+    margin-top: 1rem;
+  }
+}
+
+.button{
+  margin: auto;
+  width: 17rem;
+  padding: 0.8rem;
+  color: #FFFFFF;
+  background-color:#1D1D1F;
+  border: none;
+  border-radius: 0.5rem;
+  text-align: center;
+  margin-top: 1rem;
+  cursor: pointer;
+  &:hover{
+    transform: scale(1.09);
+  }
+}
+
+.count{
+  display: flex;
+  flex-direction: column;
+  .select{
+    margin-top: 0.5rem;
+    width: 8rem;
+    height: 3rem;
+    padding: 1rem;
+  }
+}
+
+.post{
+  display: flex;
+  flex-direction: column;
+  .postInput{
+    margin-top: 0.5rem;
+    width: 8rem;
+    height: 3rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #D2D5DA;
+    background-color: #E5E7EB;
+  }
+}
+
+.countPost{
+  display: flex;
+  justify-content: space-around;
+}
+
+.smoll{
+  font-size: 0.8rem;
+}
+
+.contact{
+  font-weight: 600;
+}
+
 
 /* Author info */
   .author-info {
@@ -89,8 +250,89 @@ h1{
     }
   }
 
+  // Desktop
 
-/* Box-shadow */
-h1{
-    box-shadow: 0px 4px 4px -1px rgba(17, 23, 41, 0.05);
-}
+  @media (max-width: 1350px) {
+    .header{
+      background-image: url(/resources/background-image.png);
+    }
+    .principale{
+      display: flex;
+    }
+    .main
+    {
+      &__block1{
+        border-radius: 1rem 0 0 1rem;
+        width: 40rem;
+        margin: -4rem auto auto 2rem;
+        padding: 1rem ;
+
+        &--iphone{
+            .spacePrice{
+                margin-left: 17rem;
+            }
+            .space{
+                margin-left: 25rem;
+            }
+        }
+
+        &--Apple-watch,&--iMac{
+      .phrase{
+        margin: 1rem 0 0 1rem;
+      }
+      .spacePrice{
+          margin-left: 24rem;
+      }
+      .space{
+           margin-left: 25rem;
+      }
+    }
+    }
+    &__block2{
+      border-radius: 0 1rem 1rem 0;
+      width: 40rem;
+      height: 34rem;
+      margin: -4rem 2rem auto auto;
+    }
+    }
+    .form__text{
+      width: 25rem;
+      text-align: left;
+      margin-right: 2rem;
+    }
+    .form__button,.form__text{
+      padding: 0.7rem;
+    }
+
+    .total__spacePrice1{
+      margin-left: 25rem;
+    }
+    .total__spacePrice2{
+      margin-left: 27.5rem;
+    }
+    .total__spacePrice3{
+      margin-left: 27rem;
+      font-weight: 600;
+    }
+
+     .formInformation .input {
+      width: 35rem;
+      text-align: left;
+    }
+
+    .countPost{
+       margin-top: 2rem;
+    }
+
+    .formInformation{
+      .select, .postInput{
+        width: 15rem;
+      }
+    }
+
+    .button{
+      width: 33rem;
+      margin-top: 2rem;
+    }
+  }
+  

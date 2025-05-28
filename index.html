@@ -11,83 +11,89 @@
 
   </head>
   <body>
-
-    <!-- Image de font avec ses textes -->
     <header class="header">
       <div class="header__element">
         Checkout <span class="header__element--modal">3 ITEMS</span>
       </div>
     </header>
 
-    <!-- Contenue principal de la page -->
-     <main class="main">
-
-      <!-- Block des appareils et leurs prix -->
-       <div class="main__block1">
-        <div class="main__block1--element">
-
-          <div class="main__block1--img">
-            <img src="resources/Gold.png" alt="iPhone 12 pro">
+    <main class="main">
+      <div class="principale">
+        <div class="main__block1">
+          <div class="main__block1--iphone">
+            <div class="main__block1--imgIphone">
+              <img src="resources/Gold.png" alt="iPhone 12 pro">
+            </div>
+            <p><span class="bold">iPhone 12 Pro</span> <span class="spacePrice bold">$999.00</span> 
+              <br>
+              Golden <br><br><br>
+              x 1 <span class="space">×</span>
+            </p>
           </div>
 
-          <p><span class="bold">iPhone 12 Pro</span> <span class="spacePrice bold">$999.00</span> 
-            <br>
-            Golden <br><br><br><br><br>
-            x 1 <span class="space">x</span>
-          </p>
+          <div class="main__block1--Apple-watch">
+            <div class="main__block1--imgApple-watch">
+              <img src="resources/Apple-watch.png" alt="Apple Watch">
+            </div>
+            <p class="phrase"><span class="bold">Apple Watch</span> <span class="spacePrice bold">$399.00</span> 
+              <br>
+              Blue <br><br>
+              x 1 <span class="space">×</span>
+            </p>
+          </div>
+          
+          <div class="main__block1--iMac">
+            <div class="main__block1--imgImac">
+              <img src="resources/iMac.png" alt="iMac">
+            </div>
+            <p class="phrase"><span class="bold">iMac</span> <span class="spacePrice bold">$1199.00</span> 
+              <br>
+              Green <br><br>
+              x 1 <span class="space">×</span>
+            </p>
+          </div>
+          <hr class="separteur">
+          <form action="#" method="post" class="form">
+            <input type="text" placeholder="Enter coupon code" class="form__text">
+            <input type="submit" value="Apply Coupon" class="form__button">
+          </form>
+
+          <div class="total">
+            <p>Sub total <span class="total__spacePrice1">$2597.00</span></p>
+            <p>Tax <span class="total__spacePrice2">$623.28</span></p>
+            <p>Total <span class="total__spacePrice3">$3220.28</span></p>
+          </div>
         </div>
-     
-    
-       </div>
-     
-     Apple Watch
-     
-     Blue
-     
-     $399.00
-     
-     iMac
-     
-     Green
-     
-     $1199.00
-     
-     Enter coupon code
-     
-     Apply Coupon
-     
-     Sub total
-     
-     $2597.00
-     
-     Tax
-     
-     $623.28
-     
-     Total
-     
-     $3220.28
-     
-     Contact Information
-     
-     First & Last name
-     
-     Enter first & last name
-     
-     Email Address
-     
-     Enter email address
-     
-     Country
-     
-     Finland
-     
-     Postal Code
-     
-     00270
-     
-     Continue
-     </main>
+
+        <div class="main__block2">
+          <form action="#" method="post" class="formInformation">
+            <label class="contact">Contact Information</label>
+
+            <label for="name" class="smoll">First & Last name</label>
+            <input type="text" id="name" placeholder="Enter first & last name" class="input">
+
+            <label for="email" class="smoll">Email Address</label>
+            <input type="email" id="email" placeholder="Enter email address" class="input">
+
+            <div class="countPost">
+              <div class="count">
+                <label for="country" class="smoll">Country</label>
+                <select name="country" id="country" class="select">
+                  <option value="Finland">Finland</option>
+                  <option value="CoteDivoire">Côte d'ivoire</option>
+                </select>
+              </div>
+              <div class="post">
+                <label for="code" class="smoll">Postal Code</label>
+                <input type="text" id="code" placeholder="00270" class="postInput">
+              </div>
+            </div>
+            
+            <input type="submit" value="Continue" class="button">
+          </form>
+        </div>
+      </div>
+    </main>
      
     <div class="author-info">
       Coded by <a href="https://www.github.com/ariel172">Ariel Yamien</a> | Challenge by

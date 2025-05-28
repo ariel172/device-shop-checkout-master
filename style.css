@@ -13,8 +13,8 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  font-style: normal;
   height: 100vh;
+  background-color: #F3F4F6;
 }
 
 /* heading */
@@ -42,6 +42,7 @@ body {
 .main {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
 }
 .main__block1 {
   background-color: #E5E7EB;
@@ -50,29 +51,184 @@ body {
   margin: -4rem auto auto auto;
   padding: 1rem;
 }
-.main__block1--element {
+.main__block1--iphone {
   display: flex;
 }
-.main__block1--element .bold {
+.main__block1--iphone .bold {
   font-weight: 700;
 }
-.main__block1--element .spacePrice {
+.main__block1--iphone .spacePrice {
   margin-left: 0.7rem;
 }
-.main__block1--element .space {
+.main__block1--iphone .space {
   margin-left: 9rem;
 }
-.main__block1--img {
+.main__block1--imgIphone {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 5.5rem;
+  height: 7rem;
   padding: 1.5rem;
   margin-right: 1rem;
   border: 2px solid #D2D5DA;
   border-radius: 1rem;
   background-color: #F3F4F6;
 }
-
-/* Box-shadow */
-h1 {
+.main__block1--imgApple-watch, .main__block1--imgImac {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 5.5rem;
+  height: 6rem;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  border: 2px solid #D2D5DA;
+  border-radius: 1rem;
+  background-color: #F3F4F6;
+}
+.main__block1--imgImac {
+  padding: 0.5rem;
+}
+.main__block1--Apple-watch, .main__block1--iMac {
+  display: flex;
+}
+.main__block1--Apple-watch .phrase, .main__block1--iMac .phrase {
+  margin: 1rem 0 0 1rem;
+}
+.main__block1--Apple-watch .bold, .main__block1--iMac .bold {
+  font-weight: 700;
+}
+.main__block1--Apple-watch .spacePrice, .main__block1--iMac .spacePrice {
+  margin-left: 1.4rem;
+}
+.main__block1--Apple-watch .space, .main__block1--iMac .space {
+  margin-left: 9rem;
+}
+.main__block1--iMac .spacePrice {
+  margin-left: 4.5rem;
+}
+.main__block2 {
+  background-color: #FFFFFF;
+  border-radius: 0 0 1rem 1rem;
+  width: 20rem;
+  margin: -1rem auto auto auto;
+  padding: 1rem;
   box-shadow: 0px 4px 4px -1px rgba(17, 23, 41, 0.05);
+}
+
+.separteur {
+  color: #D2D5DA;
+  margin-top: 2rem;
+}
+
+.form {
+  margin-top: 2rem;
+}
+.form__text {
+  padding: 0.7rem;
+  border: 1px solid #D2D5DA;
+  border-radius: 0.5rem;
+  text-align: center;
+  width: 9rem;
+}
+.form__button {
+  padding: 0.6rem;
+  margin-left: 0.6rem;
+  color: #FFFFFF;
+  background-color: #1D1D1F;
+  border: 1px solid #1D1D1F;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+.form__button:hover {
+  transform: scale(1.1);
+}
+
+.total {
+  color: #1D1D1F;
+  font-weight: 300;
+  margin-top: 1rem;
+}
+.total__spacePrice1 {
+  margin-left: 8rem;
+}
+.total__spacePrice2 {
+  margin-left: 10.5rem;
+}
+.total__spacePrice3 {
+  margin-left: 10rem;
+}
+
+.formInformation {
+  display: flex;
+  flex-direction: column;
+}
+.formInformation .input {
+  width: 17rem;
+  padding: 0.8rem;
+  background-color: #E5E7EB;
+  border: 1px solid #D2D5DA;
+  border-radius: 0.5rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+.formInformation label {
+  margin-top: 1rem;
+}
+
+.button {
+  margin: auto;
+  width: 17rem;
+  padding: 0.8rem;
+  color: #FFFFFF;
+  background-color: #1D1D1F;
+  border: none;
+  border-radius: 0.5rem;
+  text-align: center;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+.button:hover {
+  transform: scale(1.09);
+}
+
+.count {
+  display: flex;
+  flex-direction: column;
+}
+.count .select {
+  margin-top: 0.5rem;
+  width: 8rem;
+  height: 3rem;
+  padding: 1rem;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+}
+.post .postInput {
+  margin-top: 0.5rem;
+  width: 8rem;
+  height: 3rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #D2D5DA;
+  background-color: #E5E7EB;
+}
+
+.countPost {
+  display: flex;
+  justify-content: space-around;
+}
+
+.smoll {
+  font-size: 0.8rem;
+}
+
+.contact {
+  font-weight: 600;
 }
 
 /* Author info */
@@ -86,9 +242,72 @@ h1 {
   text-decoration: none;
 }
 
-/* Box-shadow */
-h1 {
-  box-shadow: 0px 4px 4px -1px rgba(17, 23, 41, 0.05);
+@media (max-width: 1350px) {
+  .header {
+    background-image: url(/resources/background-image.png);
+  }
+  .principale {
+    display: flex;
+  }
+  .main__block1 {
+    border-radius: 1rem 0 0 1rem;
+    width: 40rem;
+    margin: -4rem auto auto 2rem;
+    padding: 1rem;
+  }
+  .main__block1--iphone .spacePrice {
+    margin-left: 17rem;
+  }
+  .main__block1--iphone .space {
+    margin-left: 25rem;
+  }
+  .main__block1--Apple-watch .phrase, .main__block1--iMac .phrase {
+    margin: 1rem 0 0 1rem;
+  }
+  .main__block1--Apple-watch .spacePrice, .main__block1--iMac .spacePrice {
+    margin-left: 24rem;
+  }
+  .main__block1--Apple-watch .space, .main__block1--iMac .space {
+    margin-left: 25rem;
+  }
+  .main__block2 {
+    border-radius: 0 1rem 1rem 0;
+    width: 40rem;
+    height: 34rem;
+    margin: -4rem 2rem auto auto;
+  }
+  .form__text {
+    width: 25rem;
+    text-align: left;
+    margin-right: 2rem;
+  }
+  .form__button, .form__text {
+    padding: 0.7rem;
+  }
+  .total__spacePrice1 {
+    margin-left: 25rem;
+  }
+  .total__spacePrice2 {
+    margin-left: 27.5rem;
+  }
+  .total__spacePrice3 {
+    margin-left: 27rem;
+    font-weight: 600;
+  }
+  .formInformation .input {
+    width: 35rem;
+    text-align: left;
+  }
+  .countPost {
+    margin-top: 2rem;
+  }
+  .formInformation .select, .formInformation .postInput {
+    width: 15rem;
+  }
+  .button {
+    width: 33rem;
+    margin-top: 2rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
